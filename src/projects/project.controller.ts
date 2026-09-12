@@ -52,7 +52,6 @@ export class ProjectsController {
 
   @UseGuards(JwtAuthGuard)
   @Delete(':id')
-  @HttpCode(HttpStatus.NO_CONTENT)
   @ApiOperation({ summary: 'Deleta um projeto por ID' })
   remove(@Param('id') id: string) {
     return this.projectsService.remove(id);
